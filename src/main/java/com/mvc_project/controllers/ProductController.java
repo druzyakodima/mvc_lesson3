@@ -47,6 +47,5 @@ public class ProductController {
         productService.addProductInRepository(product);
         return "product-form-result-add";
     }
-
 }
 

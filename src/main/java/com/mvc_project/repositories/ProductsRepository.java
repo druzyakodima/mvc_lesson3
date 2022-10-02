@@ -18,8 +18,6 @@ public class ProductsRepository {
         return productList.size();
     }
 
-
-
     public Product findOneById(int id) {
         if (!productList.isEmpty()) {
             for (Product product : productList) {

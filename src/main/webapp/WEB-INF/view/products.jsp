@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
 <h1>Welcome!All products are presented here.</h1>
 
 <ul>

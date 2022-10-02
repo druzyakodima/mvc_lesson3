@@ -18,6 +18,5 @@ public class Launcher {
         server.setHandler(webapp);
         server.start();
         server.join();
-
     }
 }

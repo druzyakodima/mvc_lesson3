@@ -4,6 +4,7 @@
 
 <html>
 <body>
+
 <form:form action="processForm" modelAttribute="product">
     <h1>SELECT PRODUCTS</h1>
 
