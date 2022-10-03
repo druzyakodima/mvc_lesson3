@@ -1,7 +1,7 @@
-package com.mvc_project.service;
+package ru.geekbrains.lesson4springboot.service;
 
-import com.mvc_project.entites.Product;
-import com.mvc_project.repositories.ProductsRepository;
+import ru.geekbrains.lesson4springboot.entites.Product;
+import ru.geekbrains.lesson4springboot.repositories.ProductsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class  ProductService {
 
-    private ProductsRepository productsRepository;
+    private ProductsRepository productsRepository = new ProductsRepository();
 
     @Autowired
     public void setProductsRepository(ProductsRepository productsRepository) {
@@ -28,7 +28,7 @@ public class  ProductService {
     public void addProductInRepository(Product product) {
         productsRepository.addProduct(product);
     }
-    public Product getProductId(int id) {
+    public Product getProductId(String id) {
         return productsRepository.findOneById(id);
     }
 

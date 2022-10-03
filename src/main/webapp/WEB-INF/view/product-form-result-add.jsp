@@ -15,5 +15,6 @@ Product name: ${product.name}
 
 <br>
 Product cost: ${product.cost}$
+
 </body>
 </html>

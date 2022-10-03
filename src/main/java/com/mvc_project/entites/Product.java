@@ -1,6 +1,7 @@
 package com.mvc_project.entites;
 
 public class Product {
+
     private String id;
     private String name;
     private String cost;

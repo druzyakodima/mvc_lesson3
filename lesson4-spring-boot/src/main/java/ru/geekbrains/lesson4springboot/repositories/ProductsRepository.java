@@ -1,27 +1,34 @@
-package com.mvc_project.repositories;
+package ru.geekbrains.lesson4springboot.repositories;
 
-import com.mvc_project.entites.Product;
+import lombok.Getter;
+import ru.geekbrains.lesson4springboot.entites.Product;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.List;
+
+
 
 @Component
+@Getter
 public class ProductsRepository {
     private ArrayList<Product> productList;
 
+
     public ProductsRepository() {
         this.productList = new ArrayList<>();
+        productList.add(new Product("22","Product Z","343"));
+        productList.add(new Product("214","Product Y","324"));
+        productList.add(new Product("123","Product W","654"));
     }
 
     public int size() {
         return productList.size();
     }
 
-    public Product findOneById(int id) {
+    public Product findOneById(String id) {
         if (!productList.isEmpty()) {
             for (Product product : productList) {
-                if (Integer.parseInt(product.getId()) == id) {
+                if (product.getId().equals(id)) {
                     return product;
                 }
             }
@@ -35,10 +42,6 @@ public class ProductsRepository {
 
     public void setProductList(ArrayList<Product> products) {
         this.productList = products;
-    }
-
-    public List<Product> getProductList() {
-        return productList;
     }
 
 }
